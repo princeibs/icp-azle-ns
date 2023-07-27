@@ -1,0 +1,13 @@
+{
+  "canisters": {
+    "name_service": {
+      "main": "src/index.ts",
+      "type": "custom",
+      "build": "npx azle name_service",
+      "root": "src",
+      "ts": "src/index.ts",
+      "candid": "src/index.did",
+      "wasm": ".azle/name_service/name_service.wasm.gz"
+    }
+  }
+}
