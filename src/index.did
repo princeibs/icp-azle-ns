@@ -1,0 +1,17 @@
+type Name = record {
+  ethAddress : text;
+  twitterUsername : text;
+  btcAddress : text;
+};
+type _AzleResult = variant { Ok : text; Err : text };
+type _AzleResult_1 = variant { Ok : vec text; Err : text };
+type _AzleResult_2 = variant { Ok : Name; Err : text };
+service : () -> {
+  clearName : (text) -> (_AzleResult);
+  registerName : (text) -> (_AzleResult);
+  setNameData : (text, text, text, text) -> (_AzleResult);
+  updateNameData : (text, text, text, text) -> (_AzleResult);
+  viewAllNames : () -> (_AzleResult_1) query;
+  viewNameData : (text) -> (_AzleResult_2) query;
+  viewRegisteredName : (text) -> (_AzleResult) query;
+}
